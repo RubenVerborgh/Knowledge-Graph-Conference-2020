@@ -10,6 +10,10 @@ p.venue {
   margin-bottom: 1em;
 }
 
+ul.inline li {
+  white-space: nowrap;
+}
+
 .title.slide h2 {
   font-size: 1.75em;
 }
