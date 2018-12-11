@@ -42,6 +42,19 @@ p.venue {
 .text.slide p {
   color: var(--accent);
   font-weight: bold;
-  font-size: 1.5em;
+  font-size: 1.3em;
   line-height: 1.33;
+}
+.intro.text.slide p {
+  font-size: 1.5em;
+}
+
+.slide figure.cover.width.margin > :first-child {
+  width: 88%
+}
+.slide h2 + figure.cover.margin > :first-child {
+  margin-top: 2em;
+}
+.slide h2 + figure.cover.height.margin > :first-child {
+  height: 66%;
 }
