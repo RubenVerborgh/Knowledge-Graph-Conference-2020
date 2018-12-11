@@ -9,3 +9,7 @@ p.venue {
 .title.slide h2 {
   font-size: 1.75em;
 }
+
+.toc.slide h2 {
+  display: none;
+}
