@@ -64,5 +64,5 @@ ul.inline li {
   margin-top: 2em;
 }
 .slide h2 + figure.cover.height.margin > :first-child {
-  height: 66%;
+  height: 75%;
 }
