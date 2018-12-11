@@ -66,3 +66,22 @@ ul.inline li {
 .slide h2 + figure.cover.height.margin > :first-child {
   height: 75%;
 }
+
+p.reference {
+  text-align: right;
+  position: absolute;
+  width: 14em;
+  font-size: .8em;
+  bottom: 0;
+  right: 60px;
+}
+p.reference:not(:hover) {
+  opacity: .66;
+}
+p.reference cite {
+  font-style: italic;
+}
+p.reference .journal {
+  font-size: .8em;
+  display: block;
+}
