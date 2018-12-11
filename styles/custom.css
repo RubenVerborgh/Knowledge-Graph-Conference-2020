@@ -1,3 +1,7 @@
+.shower {
+  --accent: #3a2d72;
+}
+
 .shower .caption p {
   margin-top: .5em;
 }
@@ -12,4 +16,32 @@ p.venue {
 
 .toc.slide h2 {
   display: none;
+}
+
+.cake.slide {
+  text-align: center;
+}
+.cake.slide h2 {
+  font-size: 5em;
+  margin-top: .75em;
+}
+.cake.slide h3 {
+  font-size: 11em;
+  letter-spacing: -.075em;
+  font-weight: normal;
+  margin-top: .3em;
+}
+
+.text.slide {
+  padding-top: 3em;
+}
+.text.slide#threat{
+  padding: 5em 120px;
+  text-align: right;
+}
+.text.slide p {
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.5em;
+  line-height: 1.33;
 }
