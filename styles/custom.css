@@ -14,6 +14,10 @@ ul.inline li {
   white-space: nowrap;
 }
 
+.prefix {
+  opacity: .5;
+}
+
 .title.slide h2 {
   font-size: 1.75em;
 }
