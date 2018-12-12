@@ -301,10 +301,10 @@
     </ul>
   </div>
 
-  <div class="slide" id="linkeddata">
+  <div class="slide" id="hypermedia">
     <h2>
-      Linked Data in the RDF model<br>
-      solves crucial challenges for Solid.
+      The crucial challenges in Solid<br>
+      <span class="next">are solved by hypermedia.</span>
     </h2>
     <ul>
       <li>
@@ -324,45 +324,53 @@
 
   <div class="slide" id="linking">
     <h2>
-      Through URLs, every piece of data<br>
+      With JSON-LD, every piece of data<br>
       can link to any other piece of data.
     </h2>
-    <pre><code><span class="prefix">PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
-PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
-&lt;#ruben-likes-apidays2018&gt; a as:Like;
-  as:actor  <mark>&lt;https://ruben.verborgh.org/profile/#me&gt;</mark>;
-  as:object <mark>&lt;https://www.apidays.co/paris#this&gt;</mark>;
-  as:published "2018-12-12T10:00:00Z"^^xsd:dateTime.</code></pre>
+    <pre><code>{
+  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
+  "id":        "#ruben-likes-apidays2018",
+  "type":      "Like",
+  "actor":     "<mark>https://ruben.verborgh.org/profile/#me</mark>",
+  "object":    "<mark>https://www.apidays.co/paris#this</mark>",
+  "published": "2018-12-12T10:00:00Z"
+}</code></pre>
   </div>
 
   <div class="slide" id="semantics">
     <h2>
-      Shapes (and hopefully soon semantics)<br>
+      Data shapes and their semantics<br>
       enable <em>layered compatibility</em>.
     </h2>
-    <pre><code><span class="prefix">PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
-PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
-&lt;#ruben-likes-apidays2018&gt; <mark>a as:Like;</mark>
-  <mark>as:actor</mark>  &lt;https://ruben.verborgh.org/profile/#me&gt;;
-  <mark>as:object</mark> &lt;https://www.apidays.co/paris#this&gt;;
-  <mark>as:published</mark> "2018-12-12T10:00:00Z"^^xsd:dateTime.</code></pre>
+    <pre><code>{
+  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
+  "id":        "#ruben-likes-apidays2018",
+  "<mark>type</mark>":      "<mark>Like</mark>",
+  "<mark>actor</mark>":     "https://ruben.verborgh.org/profile/#me",
+  "<mark>object</mark>":    "https://www.apidays.co/paris#this",
+  "<mark>published</mark>": "2018-12-12T10:00:00Z"
+}</code></pre>
   </div>
 
   <div class="slide" id="integration">
     <h2>
       Different source data<br>
-      can simply be concatenated.
+      can be concatenated.
     </h2>
-    <pre><code><span class="prefix">PREFIX as: &lt;https://www.w3.org/ns/activitystreams#&gt;
-PREFIX xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt;</span>
-&lt;#ruben-likes-apidays2018&gt; a as:Like;
-  as:actor  <mark>&lt;https://ruben.verborgh.org/profile/#me&gt;</mark>;
-  as:object <mark>&lt;https://www.apidays.co/paris#this&gt;</mark>;
-  as:published "2018-12-12T10:00:00Z"^^xsd:dateTime.
-&lt;#mehdi-likes-apidays2018&gt; a as:Like;
-  as:actor  <mark>&lt;https://example.org/mehdi/#me&gt;</mark>;
-  as:object <mark>&lt;https://www.apidays.co/paris#this&gt;</mark>;
-  as:published "2018-12-12T10:05:00Z"^^xsd:dateTime.</code></pre>
+    <pre><code>{
+  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
+  <span class="prefix">"@graph":</span> [{
+    "type":      "Like",
+    "actor":     <mark>"https://ruben.verborgh.org/profile/#me"</mark>,
+    "object":    "https://www.apidays.co/paris#this",
+    "published": "2018-12-12T10:00:00Z"
+  },{
+    "type":      "Like",
+    "actor":     <mark>"https://example.org/people/mehdi#me"</mark>,
+    "object":    "https://www.apidays.co/paris#this",
+    "published": "2018-12-12T10:05:00Z"
+  }]
+}</code></pre>
   </div>
 
   <div class="toc slide" id="toc-apis-and-clients">
