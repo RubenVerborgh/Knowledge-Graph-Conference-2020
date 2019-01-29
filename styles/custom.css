@@ -23,14 +23,6 @@ ul.inline li {
   opacity: .5;
 }
 
-.title.slide h2 {
-  font-size: 1.75em;
-}
-
-.toc.slide h2 {
-  display: none;
-}
-
 .cake.slide {
   text-align: center;
 }
