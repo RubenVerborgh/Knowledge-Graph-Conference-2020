@@ -54,6 +54,18 @@ ul.inline li {
   font-size: 1.5em;
 }
 
+.slide.cover h2 {
+  text-shadow: -1.5px -1.5px 0 white,
+                1.5px -1.5px 0 white,
+               -1.5px  1.5px 0 white,
+                1.5px  1.5px 0 white;
+}
+.dark.slide.cover h2 {
+  color: var(--accent);
+  box-shadow: 0 0 100px white;
+  background-color: rgba(255, 255, 255, .5);
+}
+
 .slide figure.cover.width.margin > :first-child {
   width: 88%
 }
@@ -62,6 +74,23 @@ ul.inline li {
 }
 .slide h2 + figure.cover.height.margin > :first-child {
   height: 75%;
+}
+
+.faded {
+  opacity: .1;
+  filter: contrast(2);
+}
+
+figure.cover img {
+  z-index: -200 !important;
+}
+
+blockquote {
+  margin-top: -21px;
+}
+blockquote p {
+  font-weight: bold;
+  font-style: italic;
 }
 
 p.reference {
