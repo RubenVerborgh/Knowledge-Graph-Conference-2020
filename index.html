@@ -47,6 +47,11 @@
     <ul>
       <li class="current">
         <a href="#toc-universality">Universality and innovation</a>
+        <ul>
+          <li class="current"><a href="#toc-universality">The Web</a></li>
+          <li><a href="#toc-centralization">Centralization</a></li>
+          <li><a href="#toc-walled-gardens">Walled gardens</a></li>
+        </ul>
       </li>
       <li><a href="#toc-apps-data-people">Apps, data, and people</a></li>
       <li><a href="#toc-developer-experience">Developer experience</a></li>
@@ -119,6 +124,21 @@
     </figure>
   </div>
 
+  <div class="toc slide" id="toc-centralization">
+    <ul>
+      <li class="current">
+        <a href="#toc-universality">Universality and innovation</a>
+        <ul>
+          <li><a href="#toc-universality">The Web</a></li>
+          <li class="current"><a href="#toc-centralization">Centralization</a></li>
+          <li><a href="#toc-walled-gardens">Walled gardens</a></li>
+        </ul>
+      </li>
+      <li><a href="#toc-apps-data-people">Apps, data, and people</a></li>
+      <li><a href="#toc-developer-experience">Developer experience</a></li>
+    </ul>
+  </div>
+
   <div class="slide" id="universality-threats">
     <h2>
       Universality has been under threat<br>
@@ -146,6 +166,21 @@
           </li>
         </ul>
       </li>
+    </ul>
+  </div>
+
+  <div class="toc slide" id="toc-walled-gardens">
+    <ul>
+      <li class="current">
+        <a href="#toc-universality">Universality and innovation</a>
+        <ul>
+          <li><a href="#toc-universality">The Web</a></li>
+          <li><a href="#toc-centralization">Centralization</a></li>
+          <li class="current"><a href="#toc-walled-gardens">Walled gardens</a></li>
+        </ul>
+      </li>
+      <li><a href="#toc-apps-data-people">Apps, data, and people</a></li>
+      <li><a href="#toc-developer-experience">Developer experience</a></li>
     </ul>
   </div>
 
@@ -186,6 +221,11 @@
       <li><a href="#toc-universality">Universality and innovation</a></li>
       <li class="current">
         <a href="#toc-apps-data-people">Apps, data, and people</a>
+        <ul>
+          <li class="current"><a href="#toc-apps-data-people">Decoupling data and apps</a></li>
+          <li><a href="#toc-solid">The Solid ecosystem</a></li>
+          <li><a href="#toc-inrupt">The Solid community</a></li>
+        </ul>
       </li>
       <li><a href="#toc-developer-experience">Developer experience</a></li>
     </ul>
@@ -232,6 +272,21 @@
     <figure class="cover width margin">
       <img src="images/data-and-app-markets.svg" alt="">
     </figure>
+  </div>
+
+  <div class="toc slide" id="toc-solid">
+    <ul>
+      <li><a href="#toc-universality">Universality and innovation</a></li>
+      <li class="current">
+        <a href="#toc-apps-data-people">Apps, data, and people</a>
+        <ul>
+          <li><a href="#toc-apps-data-people">Decoupling data and apps</a></li>
+          <li class="current"><a href="#toc-solid">The Solid ecosystem</a></li>
+          <li><a href="#toc-inrupt">The Solid community</a></li>
+        </ul>
+      </li>
+      <li><a href="#toc-developer-experience">Developer experience</a></li>
+    </ul>
   </div>
 
   <div class="slide" id="solid-logo">
@@ -351,12 +406,31 @@
 }</code></pre>
   </div>
 
+  <div class="toc slide" id="toc-inrupt">
+    <ul>
+      <li><a href="#toc-universality">Universality and innovation</a></li>
+      <li class="current">
+        <a href="#toc-apps-data-people">Apps, data, and people</a>
+        <ul>
+          <li><a href="#toc-apps-data-people">Decoupling data and apps</a></li>
+          <li><a href="#toc-solid">The Solid ecosystem</a></li>
+          <li class="current"><a href="#toc-inrupt">The Solid community</a></li>
+        </ul>
+      </li>
+      <li><a href="#toc-developer-experience">Developer experience</a></li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="toc-developer-experience">
     <ul>
       <li><a href="#toc-universality">Universality and innovation</a></li>
       <li><a href="#toc-apps-data-people">Apps, data, and people</a></li>
       <li class="current">
         <a href="#toc-developer-experience">Developer experience</a>
+        <ul>
+          <li class="current"><a href="#toc-developer-experience">APIs and clients</a></li>
+          <li><a href="#toc-web-apps">Web apps</a></li>
+        </ul>
       </li>
     </ul>
   </div>
@@ -371,32 +445,6 @@
     </figure>
   </div>
 
-  <div class="slide" id="top-down">
-    <h2>
-      Most Web APIs are monoliths,<br>
-      constructed from the top down.
-    </h2>
-    <figure class="cover height margin">
-      <img src="images/top-down.svg" alt="An API exposes functionality, implemented as a single custom interface." />
-    </figure>
-  </div>
-
-  <div class="slide" id="bottom-up">
-    <h2>
-      By building Web APIs from the bottom up,<br>
-      clients can pick granular compatibility.
-    </h2>
-    <figure class="cover height margin">
-      <img src="images/bottom-up.svg" alt="Modular interface features provide functionalities that define the API." />
-    </figure>
-    <p class="reference">
-      <a href="https://ruben.verborgh.org/articles/web-api-ecosystem/">
-        <cite>A Web API ecosystem through feature-based reuse</cite>
-      </a>
-      <span class="journal">IEEE Internet Computing</span>
-    </p>
-  </div>
-
   <div class="slide" id="queries">
     <h2>
       When clients do not bind to HTTP requests,<br>
@@ -407,46 +455,18 @@
     </figure>
   </div>
 
-  <div class="slide" id="query-based-apps">
-    <h2>
-      Queries are the key to making<br>
-      decentralized apps sustainable.
-    </h2>
+  <div class="toc slide" id="toc-web-apps">
     <ul>
-      <li>
-        We don’t know in advance:
+      <li><a href="#toc-universality">Universality and innovation</a></li>
+      <li><a href="#toc-apps-data-people">Apps, data, and people</a></li>
+      <li class="current">
+        <a href="#toc-developer-experience">Developer experience</a>
         <ul>
-          <li>the sources we’ll need</li>
-          <li>the API of those sources</li>
-        </ul>
-      </li>
-      <li>
-        Web APIs can—and <em>will</em>—change,<br>
-        but our applications should not.
-      </li>
-      <li class="next">
-        <q>GraphQL is the new REST!</q>
-        <ul>
-          <li class="next">…but clients lack cross-API compatibility.</li>
-          <li class="next">
-            <a href="https://www.w3.org/TR/sparql11-overview/">SPARQL</a>
-            and
-            <a href="https://comunica.github.io/Article-ISWC2018-Demo-GraphQlLD/">GraphQL-LD</a>
-            queries have universal meaning.
-          </li>
+          <li><a href="#toc-developer-experience">APIs and clients</a></li>
+          <li class="current"><a href="#toc-web-apps">Web apps</a></li>
         </ul>
       </li>
     </ul>
-  </div>
-
-  <div class="slide" id="execute-anywhere">
-    <h2>
-      An app’s queries can be run anywhere:<br>
-      client, server, intermediaries—or all three.<br>
-    </h2>
-    <figure class="cover width margin">
-      <img src="images/queries-network.svg" alt="">
-    </figure>
   </div>
 
   <div class="toc slide" id="recap">
