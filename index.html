@@ -409,12 +409,15 @@
 
   <div class="text slide" id="summary">
     <p>
-      The Solid ecosystem enables people
-      to use the apps they need,
-      <span class="next">while<br> storing their data wherever they want.</span>
+      Solid is about <em>choice</em>.
     </p>
     <p class="next">
-      People own their data,
+      The Solid ecosystem enables <em>people</em>
+      to use the <em>apps</em> they need,
+      <span class="next">while<br> storing their <em>data</em> wherever they want.</span>
+    </p>
+    <p class="next">
+      People control their data,
       <span class="next">and share it<br>
       with the apps and people they choose.</span>
     </p>
@@ -510,78 +513,6 @@
     </ul>
   </div>
 
-  <div class="slide" id="hypermedia">
-    <h2>
-      The crucial challenges in Solid<br>
-      <span class="next">are solved by hypermedia.</span>
-    </h2>
-    <ul>
-      <li>
-        If we all store our own data,<br>
-        how do we <a href="#linking">connect</a> it to others’ data?
-      </li>
-      <li>
-        How can apps <a href="#semantics">share</a> data,<br>
-        without too many prior agreements?
-      </li>
-      <li>
-        How do we <a href="#integration">integrate</a> data<br>
-        from multiple data pods?
-      </li>
-    </ul>
-  </div>
-
-  <div class="slide" id="linking">
-    <h2>
-      With JSON-LD, every piece of data<br>
-      can link to any other piece of data.
-    </h2>
-    <pre><code>{
-  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
-  "id":        "#ruben-likes-apidays2018",
-  "type":      "Like",
-  "actor":     "<mark>https://ruben.verborgh.org/profile/#me</mark>",
-  "object":    "<mark>https://www.apidays.co/paris#this</mark>",
-  "published": "2018-12-12T10:00:00Z"
-}</code></pre>
-  </div>
-
-  <div class="slide" id="semantics">
-    <h2>
-      Data shapes and their semantics<br>
-      enable <em>layered compatibility</em>.
-    </h2>
-    <pre><code>{
-  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
-  "id":        "#ruben-likes-apidays2018",
-  "<mark>type</mark>":      "<mark>Like</mark>",
-  "<mark>actor</mark>":     "https://ruben.verborgh.org/profile/#me",
-  "<mark>object</mark>":    "https://www.apidays.co/paris#this",
-  "<mark>published</mark>": "2018-12-12T10:00:00Z"
-}</code></pre>
-  </div>
-
-  <div class="slide" id="integration">
-    <h2>
-      Different source data<br>
-      can be concatenated.
-    </h2>
-    <pre><code>{
-  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
-  <span class="prefix">"@graph":</span> [{
-    "type":      "Like",
-    "actor":     <mark>"https://ruben.verborgh.org/profile/#me"</mark>,
-    "object":    "https://www.apidays.co/paris#this",
-    "published": "2018-12-12T10:00:00Z"
-  },{
-    "type":      "Like",
-    "actor":     <mark>"https://example.org/people/mehdi#me"</mark>,
-    "object":    "https://www.apidays.co/paris#this",
-    "published": "2018-12-12T10:05:00Z"
-  }]
-}</code></pre>
-  </div>
-
   <div class="toc slide" id="toc-inrupt">
     <ul>
       <li><a href="#toc-universality">Universality and innovation</a></li>
@@ -639,6 +570,84 @@
     <figure class="cover width margin">
       <img src="images/query-based-interaction.svg" alt="">
     </figure>
+  </div>
+
+  <div class="slide" id="hypermedia">
+    <h2>
+      Interoperability challenges in Solid<br>
+      are solved through Linked Data.
+    </h2>
+    <ul>
+      <li>
+        <em>
+          If we all store our own data,<br>
+          <span class="next">how do we <a href="#linking">connect</a> it to others’ data?</span>
+        </em>
+      </li>
+      <li>
+        <em>
+          How can apps <a href="#semantics">share</a> data,<br>
+          <span class="next">without too many prior agreements?</span>
+        </em>
+      </li>
+      <li>
+        <em>
+          How do we <a href="#integration">integrate</a> data<br>
+          <span class="next">from multiple data pods?</span>
+        </em>
+      </li>
+    </ul>
+  </div>
+
+  <div class="slide" id="linking">
+    <h2>
+      With JSON-LD, every piece of data<br>
+      can link to any other piece of data.
+    </h2>
+    <pre><code>{
+  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
+  "id":        "#ruben-likes-fosdem2019",
+  "type":      "Like",
+  "actor":     "<mark>https://ruben.verborgh.org/profile/#me</mark>",
+  "object":    "<mark>https://fosdem.org/2019/#this</mark>",
+  "published": "2019-02-03T09:00:00Z"
+}</code></pre>
+  </div>
+
+  <div class="slide" id="semantics">
+    <h2>
+      Data shapes and their semantics<br>
+      enable <em>layered compatibility</em>.
+    </h2>
+    <pre><code>{
+  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
+  "id":        "#ruben-likes-fosdem2019",
+  "<mark>type</mark>":      "<mark>Like</mark>",
+  "<mark>actor</mark>":     "https://ruben.verborgh.org/profile/#me",
+  "<mark>object</mark>":    "https://fosdem.org/2019/#this",
+  "<mark>published</mark>": "2019-02-03T09:00:00Z"
+}</code></pre>
+  </div>
+
+  <div class="slide" id="integration">
+    <h2>
+      Different source data<br>
+      can be concatenated.
+    </h2>
+    <pre><code>{
+  <span class="prefix">"@context":  "https://www.w3.org/ns/activitystreams",</span>
+  <span class="prefix">"@graph":</span> [{
+    "type":      "Like",
+    "actor":     <mark>"https://ruben.verborgh.org/profile/#me"</mark>,
+    "object":    "https://fosdem.org/2019/#this",
+    "published": "2019-02-03T09:00:00Z"
+  },{
+    "type":      "Like",
+    "actor":     <mark>"https://example.org/people/silvia#me"</mark>,
+    "object":    "https://fosdem.org/2019/#this",
+    "published": "2019-02-03T09:05:00Z"
+  }]
+}</code></pre>
   </div>
 
   <div class="toc slide" id="toc-web-apps">
