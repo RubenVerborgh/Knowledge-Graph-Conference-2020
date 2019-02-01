@@ -112,3 +112,13 @@ p.reference .journal {
   font-size: .8em;
   display: block;
 }
+
+del {
+  opacity: .7;
+}
+
+ins {
+  color: var(--accent);
+  text-decoration: none;
+  font-style: italic;
+}
