@@ -14,10 +14,12 @@ ul.inline li {
   white-space: nowrap;
 }
 
+.slide pre {
+  margin-left: 0;
+}
+
 .slide pre code {
-  font-size: .9em;
-  letter-spacing: .4px;
-  line-height: 1.4;
+  line-height: 1.7;
 }
 
 .prefix {

@@ -932,6 +932,95 @@
     </figure>
   </div>
 
+  <div class="cover slide" id="state-of-js">
+    <h2>
+      What are the cool kids doing?<br>
+    </h2>
+    <ul>
+      <li>React</li>
+      <li>Vue.js</li>
+      <li>Angular</li>
+      <li>…</li>
+    </ul>
+  </div>
+
+  <div class="cover slide" id="react">
+    <h2>
+      React combines all steps into<br>
+      one component experience.
+    </h2>
+    <pre><code>&lt;LoggedIn&gt;
+  &lt;p&gt;Welcome, <mark>&lt;Value src="user.firstName"/&gt;</mark>&lt;/p&gt;
+  <span class="next"><mark>&lt;Image src="user.image" defaultSrc="profile.svg"/&gt;</mark></span>
+  <span class="next">&lt;ul&gt;
+    &lt;li&gt;<mark>&lt;Link href="user.inbox"&gt;Your inbox&lt;/Link&gt;</mark>&lt;/li&gt;
+    &lt;li&gt;&lt;Link href="user.homepage"&gt;Your homepage&lt;/Link&gt;&lt;/li&gt;
+  &lt;/ul&gt;</span>
+  <span class="next">&lt;h2&gt;Your friends&lt;/h2&gt;
+  <mark>&lt;List src="user.friends.firstName"/&gt;</mark></span>
+&lt;/LoggedIn&gt;</code></pre>
+  </div>
+
+  <div class="cover slide" id="react-ldflex">
+    <h2>
+      These components rely on<br>
+      micro-query expressions.
+    </h2>
+    <pre><code>&lt;LoggedIn&gt;
+  &lt;p&gt;Welcome, &lt;Value src="<mark>user.firstName</mark>"/&gt;&lt;/p&gt;
+  &lt;Image src="<mark>user.image</mark>" defaultSrc="profile.svg"/&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;Link href="<mark>user.inbox</mark>"&gt;Your inbox&lt;/Link&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;Link href="<mark>user.homepage</mark>"&gt;Your homepage&lt;/Link&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;h2&gt;Your friends&lt;/h2&gt;
+  &lt;List src="<mark>user.friends.firstName</mark>"/&gt;
+&lt;/LoggedIn&gt;</code></pre>
+  </div>
+
+  <div class="cover slide" id="ldflex">
+    <h2>
+      LDflex exposes Linked Data’s flexibility
+      without RDF’s complexity.
+    </h2>
+    <ul>
+      <li class="next">data.user.name</li>
+      <li class="next">data.user.friends</li>
+      <li class="next">data.user.friends.firstName</li>
+      <li class="next">data.user.friends.friends.firstName</li>
+      <li class="next">data['https://ruben.verborgh.org/profile/#me'].blog</li>
+    </ul>
+  </div>
+
+  <div class="cover slide" id="ldflex-dsl">
+    <h2>
+      LDflex is a domain-specific language<br>
+      for JavaScript.
+    </h2>
+    <ul>
+      <li>
+        every expression is valid JavaScript
+        <ul>
+          <li><code>data.user.friend.firstName</code></li>
+        </ul>
+      </li>
+      <li class="next">
+        it <em>looks</em> like a local object
+        <ul>
+          <li>but actually uses <code>Proxy</code></li>
+        </ul>
+      </li>
+      <li class="next">
+        it <em>behaves</em> like a Web query
+        <ul>
+          <li><a href="https://solid.github.io/ldflex-playground/#.user.friend.firstName"><code><strong>await</strong> data.user.friend.firstName</code></a></li>
+          <li class="next">fetches friends from your data pod…</li>
+          <li class="next">…but can fetch their names from <em>their</em> data pods!</li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+
   <div class="toc slide" id="recap">
     <ul>
       <li><a href="#toc-universality">Universality and innovation</a></li>
