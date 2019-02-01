@@ -47,7 +47,7 @@ ul.inline li {
   padding: 5em 120px;
   text-align: right;
 }
-.text.slide p {
+.text.slide > p {
   color: var(--accent);
   font-weight: bold;
   font-size: 1.3em;
@@ -95,24 +95,11 @@ blockquote p {
   font-weight: bold;
   font-style: italic;
 }
-
-p.reference {
-  text-align: right;
-  position: absolute;
-  width: 14em;
-  font-size: .8em;
-  bottom: 0;
-  right: 60px;
+.slide.text blockquote {
+  margin-top: 60px;
 }
-p.reference:not(:hover) {
-  opacity: .66;
-}
-p.reference cite {
-  font-style: italic;
-}
-p.reference .journal {
-  font-size: .8em;
-  display: block;
+cite {
+  font-size: 90%;
 }
 
 del {
@@ -126,6 +113,6 @@ ins {
 }
 
 .twitter-tweet-rendered {
-  margin: 6em auto !important;
+  margin: 4em auto !important;
   transform: scale(1.75) !important;
 }
