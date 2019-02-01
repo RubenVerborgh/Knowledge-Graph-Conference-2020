@@ -124,3 +124,8 @@ ins {
   text-decoration: none;
   font-style: italic;
 }
+
+.twitter-tweet-rendered {
+  margin: 6em auto !important;
+  transform: scale(1.75) !important;
+}
