@@ -26,8 +26,13 @@ ul.inline li {
   opacity: .5;
 }
 
-.cake.slide {
+.cake.slide h2,
+.cake.slide h3 {
   text-align: center;
+  text-shadow: -1.5px -1.5px 0 white,
+                1.5px -1.5px 0 white,
+               -1.5px  1.5px 0 white,
+                1.5px  1.5px 0 white;
 }
 .cake.slide h2 {
   font-size: 5em;
@@ -75,13 +80,14 @@ ul.inline li {
 .slide h2 + figure.cover.margin > :first-child {
   margin-top: 2em;
 }
-.slide h2 + figure.cover.height.margin > :first-child {
+.slide h2 + figure.cover.height.margin > :first-child,
+.slide ul + figure.cover.height.margin > :first-child {
   height: 75%;
 }
 
 .faded {
-  opacity: .1;
-  filter: contrast(2);
+  opacity: .2;
+  filter: contrast(1.1);
 }
 
 figure.cover img {
