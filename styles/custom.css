@@ -26,6 +26,11 @@ ul.inline li {
   opacity: .5;
 }
 
+.title.slide h2 {
+  margin-top: 2em;
+  font-size: 2em;
+}
+
 .cake.slide h2,
 .cake.slide h3 {
   text-align: center;
