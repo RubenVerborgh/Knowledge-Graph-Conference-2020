@@ -2,12 +2,14 @@
   --accent: #3a2d72;
 }
 
+.shower .caption h1 {
+  line-height: 1.2;
+}
 .shower .caption p {
   margin-top: .5em;
 }
 p.venue {
   font-style: italic;
-  margin-bottom: 1em;
 }
 
 ul.inline li {
