@@ -28,25 +28,6 @@ ul.inline li {
   opacity: .5;
 }
 
-.cake.slide h2,
-.cake.slide h3 {
-  text-align: center;
-  text-shadow: -1.5px -1.5px 0 white,
-                1.5px -1.5px 0 white,
-               -1.5px  1.5px 0 white,
-                1.5px  1.5px 0 white;
-}
-.cake.slide h2 {
-  font-size: 5em;
-  margin-top: .75em;
-}
-.cake.slide h3 {
-  font-size: 11em;
-  letter-spacing: -.075em;
-  font-weight: normal;
-  margin-top: .3em;
-}
-
 .text.slide {
   padding-top: 3em;
 }
@@ -56,8 +37,9 @@ ul.inline li {
   font-size: 1.3em;
   line-height: 1.33;
 }
-.intro.text.slide p {
-  font-size: 1.4em;
+.text.slide p {
+  font-size: 1.3em;
+  line-height: 1.4;
 }
 
 .slide.cover h2 {
