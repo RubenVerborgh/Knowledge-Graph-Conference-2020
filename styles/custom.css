@@ -50,16 +50,18 @@ ul.inline li {
 }
 
 .text.slide {
-  padding-top: 3em;
+  padding-top: 2em;
 }
 .text.slide > p {
+  margin-left: 0;
   color: var(--accent);
   font-weight: bold;
   font-size: 1.3em;
-  line-height: 1.33;
+  line-height: 1.4;
 }
-.text.slide p {
-  font-size: 1.3em;
+.large.text.slide > p {
+  margin-top: 1em;
+  font-size: 2em;
   line-height: 1.4;
 }
 
